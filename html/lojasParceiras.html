@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/lojasParceiras.css" />
+    <title>Crud-Formulario</title>
+  </head>
+  <img src="../logo.jpeg" id="img" alt="" />
+  <body>
+    <form name="formulario" id="formulario" method="post">
+      <div>
+        <label for="">Lojas Parceiras</label>
+        <input type="text" name="lojas" id="lojas" />
+      </div>
+      <div>
+        <label for="">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div>
+        <label for="">Telefone</label>
+        <input type="tel" name="telefone" id="telefone" />
+      </div>
+      <div>
+        <button type="button" onclick="salvar()">Salvar</button>
+      </div>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Lojas</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tbody-lojas"></tbody>
+    </table>
+
+    <div id="modal-editar">
+      <div class="modal-editar">
+        <h3>Editar Loja</h3>
+        <input type="hidden" id="indexEditar" />
+        <label>Loja:</label>
+        <input type="text" id="editar-loja" /><br />
+        <label>Email:</label>
+        <input type="email" id="editar-email" /><br />
+        <label>Telefone:</label>
+        <input type="text" id="editar-telefone" /><br />
+        <button onclick="salvarEdicao()">Salvar Alterações</button>
+        <button onclick="fecharModal()">Cancelar</button>
+      </div>
+    </div>
+
+    <script src="../javascript/lojasParceiras.js"></script>
+  </body>
+</html>
